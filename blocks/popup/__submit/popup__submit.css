@@ -17,3 +17,9 @@
 .popup__submit:hover {
   opacity: .8;
 }
+
+@media screen and (max-width: 530px) {
+  .popup__submit {
+    min-height: 46px;
+  }
+}
