@@ -4,8 +4,8 @@ let popupCloseButton = document.querySelector('.popup__close')
 let popupSubmitButton = document.querySelector('.popup__submit')
 let profileName = document.querySelector('.profile__name')
 let profileJob = document.querySelector('.profile__job')
-let popupName = document.querySelector('.popup__item__el_name')
-let popupJob = document.querySelector('.popup__item__el_job')
+let popupName = document.querySelector('.popup__item_el_name')
+let popupJob = document.querySelector('.popup__item_el_job')
 
 popupOpenButton.addEventListener('click', (e) => {
   e.preventDefault();
