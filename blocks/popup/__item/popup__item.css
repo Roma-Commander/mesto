@@ -8,4 +8,16 @@
   width: 100%;
   min-height: 27px;
   outline: none;
+  margin: 0 0 27px 0;
+}
+
+.popup__item:last-of-type {
+  margin: 0 0 48px 0;
+}
+
+@media screen and (max-width: 530px) {
+
+  .popup__item:last-of-type {
+    margin: 0 0 45px 0;
+  }
 }

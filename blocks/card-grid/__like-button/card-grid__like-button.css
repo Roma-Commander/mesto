@@ -9,6 +9,7 @@
   background-position: center;
   background-color: white;
   transition: opacity 0.15s linear;
+  cursor: pointer;
 }
 
 .card-grid__like-button:hover {
