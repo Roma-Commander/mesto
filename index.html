@@ -22,43 +22,23 @@
       <section class="profile">
         <div class="profile__wrapper">
           <img src="./images/Avatar.jpg" alt="Аватар пользователя" class="profile__image">
-          <article class="profile__info">
+          <div class="profile__info">
             <div class="profile__info-wrapper">
               <h1 class="profile__name">Жак-Ив Кусто</h1>
               <button class="profile__edit-button" type="button"></button>
             </div>
             <p class="profile__job">Исследователь океана</p>
-          </article>
+          </div>
         </div>
         <button class="profile__add-button" type="button"></button>
       </section>
       <!--card-grid---------------------------------------->
       <section class="card-grid">
-        <!--Я не стал исправлять заголовки на h3-h6 т.к.
-        В статье на которую дали ссылку сказано:
-        Примечания к использованию
-        Не используйте низкие уровни чтобы снизить размер шрифта: используйте CSS font-size.
-        Избегайте пропуск уровней заголовков: всегда начинайте с <h1>, потом используйте <h2>, и так далее
-
-        Проблемы доступности
-        Навигация
-        Обычный метод навигации для пользователей программ чтения с экрана - это переход от заголовка к заголовку для
-        быстрого определения содержимого страницы. Из-за этого важно не пропускать один или несколько уровней заголовка.
-        Это может создать путаницу, так как человеку, который движется по этому пути, может быть интересно узнать, где
-        находится отсутствующий заголовок.
-
-        Не делай
-        <h1>Heading level 1</h1>
-        <h3>Heading level 3</h3>
-        <h4>Heading level 4</h4>
-
-        у меня в коде до карточек присутствует только 1 заголовок и он h1
-        p.s. если не прав исправлю в некст итерации-->
 
         <div class="card-grid__card">
           <img src="./images/karachaevsk.jpg" alt="" class="card-grid__image">
           <div class="card-grid__caption">
-            <h2 class="card-grid__title">Карачаевск</h2>
+            <h3 class="card-grid__title">Карачаевск</h3>
             <button class="card-grid__like-button" type="button"></button>
           </div>
         </div>
@@ -66,7 +46,7 @@
         <div class="card-grid__card">
           <img src="./images/elbrus.jpg" alt="" class="card-grid__image">
           <div class="card-grid__caption">
-            <h2 class="card-grid__title">Гора Эльбрус</h2>
+            <h3 class="card-grid__title">Гора Эльбрус</h3>
             <button class="card-grid__like-button" type="button"></button>
           </div>
         </div>
@@ -74,7 +54,7 @@
         <div class="card-grid__card">
           <img src="./images/dombai.jpg" alt="" class="card-grid__image">
           <div class="card-grid__caption">
-            <h2 class="card-grid__title">Домбай</h2>
+            <h3 class="card-grid__title">Домбай</h3>
             <button class="card-grid__like-button" type="button"></button>
           </div>
         </div>
@@ -82,7 +62,7 @@
         <div class="card-grid__card">
           <img src="./images/elbrus.jpg" alt="" class="card-grid__image">
           <div class="card-grid__caption">
-            <h2 class="card-grid__title">Гора Эльбрус</h2>
+            <h3 class="card-grid__title">Гора Эльбрус</h3>
             <button class="card-grid__like-button" type="button"></button>
           </div>
         </div>
@@ -90,7 +70,7 @@
         <div class="card-grid__card">
           <img src="./images/dombai.jpg" alt="" class="card-grid__image">
           <div class="card-grid__caption">
-            <h2 class="card-grid__title">Домбай</h2>
+            <h3 class="card-grid__title">Домбай</h3>
             <button class="card-grid__like-button" type="button"></button>
           </div>
         </div>
@@ -98,7 +78,7 @@
         <div class="card-grid__card">
           <img src="./images/karachaevsk.jpg" alt="" class="card-grid__image">
           <div class="card-grid__caption">
-            <h2 class="card-grid__title">Карачаево-Черкеск</h2>
+            <h3 class="card-grid__title">Карачаево-Черкеск</h3>
             <button class="card-grid__like-button" type="button"></button>
           </div>
         </div>
@@ -112,14 +92,16 @@
   </div>
 
   <section class="popup">
-    <form class="popup__form" name="popup-form">
+    <div class="popup__container">
       <h3 class="popup__title">Редактировать&nbsp;профиль</h3>
-      <input type="text" placeholder="Введите ваше Имя" name="popup-name" class="popup__item popup__item_el_name">
-      <input type="text" placeholder="Введите ваше место работы" name="popup-job"
-        class="popup__item popup__item_el_job">
-      <button class="popup__submit" type="submit">Сохранить</button>
+      <form class="popup__form" name="popup-form">
+        <input type="text" placeholder="Введите ваше Имя" name="popup-name" class="popup__item popup__item_el_name">
+        <input type="text" placeholder="Введите ваше место работы" name="popup-job"
+          class="popup__item popup__item_el_job">
+        <button class="popup__submit" type="submit">Сохранить</button>
+      </form>
       <button class="popup__close" type="button"></button>
-    </form>
+    </div>
   </section>
 
   <script src="./scripts/index.js"></script>
