@@ -1,5 +1,5 @@
-.card-grid__card {
-  position: relative;
+.popup-add__form {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }

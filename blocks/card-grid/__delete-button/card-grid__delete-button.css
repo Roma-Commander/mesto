@@ -1,0 +1,20 @@
+.card-grid__delete-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 18px;
+  height: 19px;
+  align-self: center;
+  border: none;
+  box-sizing: border-box;
+  background-image: url(../../../images/delete_button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0);
+  transition: opacity 0.15s linear;
+  cursor: pointer;
+}
+
+.card-grid__delete-button:hover {
+  opacity: .6;
+}

@@ -33,64 +33,14 @@
         <button class="profile__add-button" type="button"></button>
       </section>
       <!--card-grid---------------------------------------->
-      <section class="card-grid">
-
-        <div class="card-grid__card">
-          <img src="./images/karachaevsk.jpg" alt="" class="card-grid__image">
-          <div class="card-grid__caption">
-            <h3 class="card-grid__title">Карачаевск</h3>
-            <button class="card-grid__like-button" type="button"></button>
-          </div>
-        </div>
-
-        <div class="card-grid__card">
-          <img src="./images/elbrus.jpg" alt="" class="card-grid__image">
-          <div class="card-grid__caption">
-            <h3 class="card-grid__title">Гора Эльбрус</h3>
-            <button class="card-grid__like-button" type="button"></button>
-          </div>
-        </div>
-
-        <div class="card-grid__card">
-          <img src="./images/dombai.jpg" alt="" class="card-grid__image">
-          <div class="card-grid__caption">
-            <h3 class="card-grid__title">Домбай</h3>
-            <button class="card-grid__like-button" type="button"></button>
-          </div>
-        </div>
-
-        <div class="card-grid__card">
-          <img src="./images/elbrus.jpg" alt="" class="card-grid__image">
-          <div class="card-grid__caption">
-            <h3 class="card-grid__title">Гора Эльбрус</h3>
-            <button class="card-grid__like-button" type="button"></button>
-          </div>
-        </div>
-
-        <div class="card-grid__card">
-          <img src="./images/dombai.jpg" alt="" class="card-grid__image">
-          <div class="card-grid__caption">
-            <h3 class="card-grid__title">Домбай</h3>
-            <button class="card-grid__like-button" type="button"></button>
-          </div>
-        </div>
-
-        <div class="card-grid__card">
-          <img src="./images/karachaevsk.jpg" alt="" class="card-grid__image">
-          <div class="card-grid__caption">
-            <h3 class="card-grid__title">Карачаево-Черкеск</h3>
-            <button class="card-grid__like-button" type="button"></button>
-          </div>
-        </div>
-
-      </section>
+      <section class="card-grid"></section>
     </main>
 
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
   </div>
-
+  <!--popupEdit---------------------------------------->
   <section class="popup">
     <div class="popup__container">
       <h3 class="popup__title">Редактировать&nbsp;профиль</h3>
@@ -103,7 +53,38 @@
       <button class="popup__close" type="button"></button>
     </div>
   </section>
-
+  <!--popupEdit---------------------------------------->
+  <section class="popup-add">
+    <div class="popup-add__container">
+      <h3 class="popup-add__title">Новое&nbsp;место</h3>
+      <form class="popup-add__form" name="popupadd-form">
+        <input type="text" placeholder="Название" name="popup-place" class="popup-add__item popup-add__item_el_place">
+        <input type="text" placeholder="Ссылка на картинку" name="popup-url"
+          class="popup-add__item popup-add__item_el_url">
+        <button class="popup-add__submit" type="submit">Создать</button>
+      </form>
+      <button class="popup-add__close" type="button"></button>
+    </div>
+  </section>
+  <!--PopupCard-->
+  <section class="popup-card">
+    <div class="popup-card__container">
+      <button class="popup-card__close-button"></button>
+      <img class="popup-card__image">
+      <h3 class="popup-card__caption"></h3>
+    </div>
+  </section>
+  <!--templateCard-->
+  <template class="template-card">
+    <div class="card-grid__card">
+      <button class="card-grid__delete-button" type="button"></button>
+      <img alt="Изображение c карточки" class="card-grid__image">
+      <div class="card-grid__caption">
+        <h3 class="card-grid__title"></h3>
+        <button class="card-grid__like-button" type="button"></button>
+      </div>
+    </div>
+  </template>
   <script src="./scripts/index.js"></script>
 </body>
 
