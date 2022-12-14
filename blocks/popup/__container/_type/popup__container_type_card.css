@@ -1,0 +1,10 @@
+.popup__container_type_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  max-width: 75vw;
+  height: 75vh;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+}

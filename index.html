@@ -41,37 +41,35 @@
     </footer>
   </div>
   <!--popupEdit---------------------------------------->
-  <section class="popup">
-    <div class="popup__container">
-      <h3 class="popup__title">Редактировать&nbsp;профиль</h3>
-      <form class="popup__form" name="popup-form">
-        <input type="text" placeholder="Введите ваше Имя" name="popup-name" class="popup__item popup__item_el_name">
-        <input type="text" placeholder="Введите ваше место работы" name="popup-job"
-          class="popup__item popup__item_el_job">
-        <button class="popup__submit" type="submit">Сохранить</button>
+  <section class="popup popup_type_edit">
+    <div class="popup__container popup__container_type_edit">
+      <h3 class="popup__title popup__title_type_edit">Редактировать&nbsp;профиль</h3>
+      <form class="popup__form popup__form_type_edit" name="popup-form-edit">
+        <input type="text" placeholder="Имя" name="popup-name" class="popup__item popup__item_el_name">
+        <input type="text" placeholder="Место работы" name="popup-job" class="popup__item popup__item_el_job">
+        <button class="popup__submit popup__submit_type_edit" type="submit">Сохранить</button>
       </form>
-      <button class="popup__close" type="button"></button>
+      <button class="popup__close popup__close_type_edit" type="button"></button>
     </div>
   </section>
-  <!--popupEdit---------------------------------------->
-  <section class="popup-add">
-    <div class="popup-add__container">
-      <h3 class="popup-add__title">Новое&nbsp;место</h3>
-      <form class="popup-add__form" name="popupadd-form">
-        <input type="text" placeholder="Название" name="popup-place" class="popup-add__item popup-add__item_el_place">
-        <input type="text" placeholder="Ссылка на картинку" name="popup-url"
-          class="popup-add__item popup-add__item_el_url">
-        <button class="popup-add__submit" type="submit">Создать</button>
+  <!--popupAdd---------------------------------------->
+  <section class="popup popup_type_add">
+    <div class="popup__container popup__container_type_add">
+      <h3 class="popup__title popup__title_type_add">Новое&nbsp;место</h3>
+      <form class="popup__form popup__form_type_add" name="popup-form-add">
+        <input type="text" placeholder="Название" name="popup-place" class="popup__item popup__item_el_place">
+        <input type="text" placeholder="Ссылка на картинку" name="popup-url" class="popup__item popup__item_el_url">
+        <button class="popup__submit popup__submit_type_add" type="submit">Создать</button>
       </form>
-      <button class="popup-add__close" type="button"></button>
+      <button class="popup__close popup__close_type_add" type="button"></button>
     </div>
   </section>
   <!--PopupCard-->
-  <section class="popup-card">
-    <div class="popup-card__container">
-      <button class="popup-card__close-button"></button>
-      <img class="popup-card__image">
-      <h3 class="popup-card__caption"></h3>
+  <section class="popup popup_type_card">
+    <div class="popup__container popup__container_type_card">
+      <button class="popup__close popup__close_type_card"></button>
+      <img class="popup__image">
+      <h3 class="popup__caption"></h3>
     </div>
   </section>
   <!--templateCard-->
@@ -85,6 +83,7 @@
       </div>
     </div>
   </template>
+  <script src="./scripts/cards.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 
