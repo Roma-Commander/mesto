@@ -1,4 +1,4 @@
-.popup__item {
+.popup__input {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -8,17 +8,14 @@
   width: 100%;
   min-height: 32px;
   outline: none;
-  margin: 0 0 25px 0;
+  margin: 0;
   padding: 0;
 }
 
-.popup__item:last-of-type {
-  margin: 0 0 48px 0;
+.popup__input:hover {
+  border-bottom: 1px solid #000;
 }
 
-@media screen and (max-width: 530px) {
-
-  .popup__item:last-of-type {
-    margin: 0 0 45px 0;
-  }
+.popup__input:focus {
+  box-shadow: 0 0 3px 3px rgba(76, 159, 248, .6);
 }
