@@ -52,13 +52,13 @@ const createCard = (item) => {
     .addEventListener('click', (e) => {
       e.target.classList.toggle('card-grid__like-button_active')
     });
-  cardCopyImage.addEventListener('click', (e) => {
-    e.preventDefault();
+  function openImagePopup(item) {
     openPopup(popupCard);
     popupCardImage.setAttribute('src', item.link);
     popupCardImage.setAttribute('alt', item.name);
     popupCardCaption.textContent = item.name;
-  });
+  }
+  cardCopyImage.addEventListener('click', () => openImagePopup(item));
   return cardCopy;
 };
 
