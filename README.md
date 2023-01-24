@@ -7,8 +7,7 @@
 
 ## Новые знания, полученные в процессе создания данного проекта:
 
-+ Настройка валидации форм чреез JS
-+ Реализация закрывания попапа при клике на оверлей 
++ Использование классов в JS(Рефакторинг под классы) 
 
 * [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?t=GK6NMhjCCOY1oQuG-0)
 * [Ссылка на сайт в GitPages](https://roma-commander.github.io/mesto/)
