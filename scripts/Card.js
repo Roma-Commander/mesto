@@ -1,4 +1,4 @@
-import { openPopup } from './index.js';
+import { openPopup } from './utils.js';
 
 const popupCard = document.querySelector('.popup_type_card');
 const popupCardCaption = document.querySelector('.popup__caption');
@@ -10,6 +10,7 @@ class Card {
     this._link = data.link;
     this._templateSelector = templateSelector;
   }
+
 
   _getTemplate() {
     const cardElement = document
@@ -24,10 +25,11 @@ class Card {
   generateCard() {
     this._element = this._getTemplate();
     this._setEventListeners();
-    this._element.querySelector('.card-grid__title').textContent = this._name;
-    this._element.querySelector('.card-grid__image').setAttribute('src', this._link);
-    this._element.querySelector('.card-grid__image').setAttribute('alt', this._name);
+    this._elementImage = this._element.querySelector('.card-grid__image')
 
+    this._elementImage.setAttribute('src', this._link);
+    this._elementImage.setAttribute('alt', this._name);
+    this._element.querySelector('.card-grid__title').textContent = this._name;
     return this._element;
   }
 

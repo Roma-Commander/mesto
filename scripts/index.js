@@ -1,6 +1,7 @@
 import { Card } from './Card.js';
 import { initialCards } from './cards.js';
 import { FormValidator } from './FormValidator.js';
+import { openPopup, closePopup } from './utils.js'
 
 const validationConfig = {
   formSelector: '.popup__form',
@@ -30,23 +31,24 @@ const popups = document.querySelectorAll('.popup')
 const forms = document.querySelectorAll('.popup__f  orm')
 // добавление карточкек 
 const cardContainer = document.querySelector('.card-grid');
-// добавление карточкек из массива
-initialCards.forEach((item) => {
+// создание карточки
+function createCard(item) {
   const card = new Card(item, '.template-card_type_default');
   const cardElement = card.generateCard();
-  cardContainer.prepend(cardElement);
+  return cardElement;
+};
+// добавление карточкек из массива
+initialCards.forEach((item) => {
+  cardContainer.prepend(createCard(item));
 });
 
 // добавление новых карточек
 const addCard = (e) => {
   e.preventDefault();
   const item = { name: popupAddPlace.value, link: popupAddUrl.value };
-  const card = new Card(item, '.template-card_type_default');
-  const cardElement = card.generateCard();
-  cardContainer.prepend(cardElement);
+  addValidator.disableSubmitButton();
+  cardContainer.prepend(createCard(item));
   popupAddForm.reset();
-  e.submitter.classList.add('popup__submit_inactive')
-  e.submitter.setAttribute('disabled', true)
   closePopup(popupAdd);
 };
 
@@ -55,34 +57,17 @@ const submitEditProfile = (e) => {
   e.preventDefault();
   profileName.textContent = popupEditName.value;
   profileJob.textContent = popupEditJob.value;
+  editValidator.disableSubmitButton();
   closePopup(popupEdit);
 }
 
 // присвоение значений из профиля в popup редактирования
 const popupEditValue = (e) => {
   e.preventDefault();
-  openPopup(popupEdit);
   popupEditName.value = profileName.textContent;
   popupEditJob.value = profileJob.textContent;
+  openPopup(popupEdit);
 }
-
-// закрывание popup при нажатии esc
-const closePopupEscape = (e) => {
-  if (e.key === 'Escape') {
-    const openedPopup = document.querySelector('.popup_opened');
-    closePopup(openedPopup);
-  }
-};
-
-// open/close popup
-function openPopup(popup) {
-  popup.classList.add('popup_opened');
-  document.addEventListener('keydown', closePopupEscape);
-};
-function closePopup(popup) {
-  popup.classList.remove("popup_opened");
-  document.removeEventListener('keydown', closePopupEscape);
-};
 
 // закрытие popup при клике на оверлей или крестик
 popups.forEach((popup) => {
