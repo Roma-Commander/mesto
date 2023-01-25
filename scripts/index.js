@@ -93,5 +93,3 @@ editValidator.enableValidation();
 
 const addValidator = new FormValidator(validationConfig, popupAddForm);
 addValidator.enableValidation();
-
-export { openPopup };
