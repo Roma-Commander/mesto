@@ -27,8 +27,6 @@ const popupAddPlace = document.querySelector('#place-input');
 const popupAddUrl = document.querySelector('#url-input');
 // open/close popups
 const popups = document.querySelectorAll('.popup')
-// Формы
-const forms = document.querySelectorAll('.popup__f  orm')
 // добавление карточкек 
 const cardContainer = document.querySelector('.card-grid');
 // создание карточки
@@ -46,11 +44,17 @@ initialCards.forEach((item) => {
 const addCard = (e) => {
   e.preventDefault();
   const item = { name: popupAddPlace.value, link: popupAddUrl.value };
-  addValidator.disableSubmitButton();
   cardContainer.prepend(createCard(item));
   popupAddForm.reset();
   closePopup(popupAdd);
 };
+// Открытие и очистка формы добавления карточек
+const openAddPopup = () => {
+  addValidator.disableSubmitButton();
+  addValidator.resetValidation();
+  popupAddForm.reset();
+  openPopup(popupAdd);
+}
 
 // присвоение значений из попапа в профиль
 const submitEditProfile = (e) => {
@@ -64,6 +68,8 @@ const submitEditProfile = (e) => {
 // присвоение значений из профиля в popup редактирования
 const popupEditValue = (e) => {
   e.preventDefault();
+  editValidator.resetValidation();
+  editValidator.disableSubmitButton();
   popupEditName.value = profileName.textContent;
   popupEditJob.value = profileJob.textContent;
   openPopup(popupEdit);
@@ -81,7 +87,7 @@ popups.forEach((popup) => {
 // listeners
 popupEditOpenButton.addEventListener('click', popupEditValue);
 
-popupAddOpenButton.addEventListener('click', () => { openPopup(popupAdd) });
+popupAddOpenButton.addEventListener('click', openAddPopup);
 
 popupEditForm.addEventListener('submit', submitEditProfile);
 
